@@ -1,38 +1,125 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main-container{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 2rem;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+option{
+  font-size: 15px;
+  padding: 5px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.filter{
+  position: fixed;
+  top: 0;
+  left: 10%;
+  z-index: 100;
+}
+.container{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 20px auto;
+}
+.events{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+.event{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  min-width: 300px;
+  margin:5px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border: 2px solid purple;
+  padding:5px;
+  cursor: pointer;
+  border-radius: 1rem;
+}
+.event:hover{
+  -webkit-transform: scale(1.025);
+      -ms-transform: scale(1.025);
+          transform: scale(1.025);
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+input[type='date']{
+  /* width: 100%; */
+  padding: 12px 20px;
+  margin: 8px 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 2rem;
+}
+.filter{
+  padding: 12px 20px;
+  margin: 8px 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 2rem;
+}
+.custom-dates{
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+          margin-top: 10vh;
+}
+.event-title{
+  font-size: 1rem;
+  flex: 1;
+  font-weight: 700;
+  text-align: left;
+  padding-left: .5rem;
+  padding-top: .5rem;
+}
+.event-date{
+  flex: 1;
+  background-color:blanchedalmond;
+  border-radius: 0.5rem;
+  text-align: left;
+  padding-left: .5rem;
+  padding-top: .5rem;
+}
+.event-data{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  flex: 2;
+  background-color: aqua;
+  border-radius: 0.5rem;
+  justify-content: space-evenly;
 }
