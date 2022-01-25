@@ -15,6 +15,37 @@
       -ms-flex-pack: center;
           justify-content: center;
   margin: 2rem;
+  margin-top: 7rem;
+}
+.form-container{
+  display: flex;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  margin: 0 20%;
+  border-radius: 5px;
+  margin-top: 7rem;
+  flex-direction: column;
+  font-size: 200;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.form{
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  min-width: 50%;
+  justify-content: flex-start;
+}
+label{
+  text-align: left;
+  margin-left: 5%;
+}
+input{
+  margin: 10px auto;
+  border-radius: 20px;
+}
+.form-input{
+  padding: .8rem;
+  min-width: 90%;
 }
 option{
   font-size: 15px;
@@ -22,7 +53,7 @@ option{
 }
 .filter{
   position: fixed;
-  top: 0;
+  top: 10%;
   left: 10%;
   z-index: 100;
 }
@@ -97,7 +128,7 @@ input[type='date']{
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-          margin-top: 10vh;
+          margin-top: 18vh;
 }
 .event-title{
   font-size: 1rem;
@@ -122,4 +153,65 @@ input[type='date']{
   background-color: aqua;
   border-radius: 0.5rem;
   justify-content: space-evenly;
+}
+.submit{
+  width: 200px;
+  align-self: left;
+  margin-top: 20px;
+  margin-left: 5%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  font-weight: '700';
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  background-color: purple;
+  color: white;
+
+}
+.success{
+  background-color: rgba(172, 255, 47, 0.534);
+  padding: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: left;
+  border-radius: 5px;
+}
+.cross{
+  cursor: pointer;
+}
+.warning{
+  background-color: rgba(255, 166, 0, 0.473);
+  padding: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: left;
+  border-radius: 5px;
+}
+.error{
+  background-color: rgba(255, 0, 0, 0.473);
+  padding: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: left;
+  border-radius: 5px;
+}
+.submit:disabled{
+  background-color: grey;
+}
+.submit:hover{
+  transform: scale(1.05);
+}
+
+@media screen and (max-width: 680px) {
+  .form{
+    min-width: 90%;
+  }
+  .form-container{
+    margin: 10px;
+    margin-top: 7rem;
+  }
 }
