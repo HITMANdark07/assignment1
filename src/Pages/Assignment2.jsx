@@ -50,7 +50,7 @@ function Assignment2() {
                     password:"",
                     confirm:"",
                     loading:false,
-                    message:`${res.data?.user?.name} is Successfully Registered`,
+                    message:`${res?.data?.user?.name} is Successfully Registered`,
                     status:'success'
                 }));
             }
@@ -60,7 +60,7 @@ function Assignment2() {
                 loading:false,
                 button:'SIGN UP',
                 status:"warning",
-                message:err.response.data.error
+                message:err?.response?.data?.error
             }))
         })
     }
