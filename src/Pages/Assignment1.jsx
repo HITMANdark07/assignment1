@@ -10,6 +10,7 @@ function Assignment1() {
   const [titles, setTitles] = React.useState([]);
   const [start, setStart] = React.useState("");
   const [end, setEnd] = React.useState("");
+  const [place, setPlace] = React.useState("");
   const [show, setShow] = React.useState(false);
   const init = () => {
     axios
@@ -77,7 +78,8 @@ function Assignment1() {
         break;
     }
   };
-
+  let newTitles = titles.filter((t) => t===place).length>0 ?  titles.filter((t) => t===place) : [...titles];
+  console.log(newTitles);
   React.useEffect(() => {
     init();
   }, []);
@@ -109,10 +111,18 @@ function Assignment1() {
           </div>
         ) : null}
       </div>
+      <select className="filter" style={{marginTop:150}} onChange={(e) => {
+        setPlace(e.target.value);
+      }}>
+        <option >ALL</option>
+        {titles.map((t) => (
+          <option key={t} value={t}>{t}</option>
+        ))}
+      </select>
 
       {start === "" || end === "" ? (
         <div className="main-container" style={{marginTop:show?'20px':''}}>
-          {titles.map((title, idx) => (
+          {newTitles.map((title, idx) => (
             <div key={idx} className="container">
               <h2>{title.toUpperCase()}</h2>
               <div className="events">
@@ -125,7 +135,7 @@ function Assignment1() {
         </div>
       ) : (
         <div className="main-container" style={{marginTop:show?'20px':''}}>
-          {titles.map((title, idx) => (
+          {newTitles.map((title, idx) => (
             <div
               key={idx}
               className="container"
